@@ -1,0 +1,32 @@
+/* DDG Studio — Digital Wedding Invitation Stylesheet (style.css) */
+body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #ece7df; }
+.theme-resmi { --primary: #8c6d46; --primary-soft: #f5efe6; --bg-page: #fcfaf7; --bg-card: #ffffff; --border-tone: #e7dfd3; --text-main: #292524; --text-muted: #78716c; }
+.theme-resmi .font-heading { font-family: 'Cormorant Garamond', Georgia, serif; }
+.theme-resmi .font-script { font-family: 'Great Vibes', cursive; }
+.theme-resmi .font-body { font-family: 'Plus Jakarta Sans', sans-serif; }
+.theme-tradisional { --primary: #7c3f1d; --primary-soft: #f3e5d0; --bg-page: #f8f1e5; --bg-card: #fffcf7; --border-tone: #d8c2a3; --text-main: #3b2314; --text-muted: #6e4f3a; }
+.theme-tradisional .font-heading { font-family: 'Cinzel', Georgia, serif; letter-spacing: 0.04em; }
+.theme-tradisional .font-script { font-family: 'Great Vibes', cursive; }
+.theme-tradisional .font-body { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.05em; }
+.theme-santai { --primary: #4d6b57; --primary-soft: #e8f0ea; --bg-page: #f7faf8; --bg-card: #ffffff; --border-tone: #d5e2d9; --text-main: #1f2d24; --text-muted: #5a6e61; }
+.theme-santai .font-heading { font-family: 'Quicksand', sans-serif; font-weight: 700; }
+.theme-santai .font-script { font-family: 'Great Vibes', cursive; }
+.theme-santai .font-body { font-family: 'Quicksand', sans-serif; }
+.inv-surface { background-color: var(--bg-page); color: var(--text-main); }
+.inv-card { background-color: var(--bg-card); border-color: var(--border-tone); }
+.inv-primary-text { color: var(--primary); }
+.inv-primary-bg { background-color: var(--primary); }
+.inv-soft-bg { background-color: var(--primary-soft); }
+.inv-border { border-color: var(--border-tone); }
+.inv-muted { color: var(--text-muted); }
+@keyframes spinSlow { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+.animate-spin-slow { animation: spinSlow 9s linear infinite; }
+.paused-spin { animation-play-state: paused; }
+@keyframes floatGentle { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-6px); } }
+.animate-float { animation: floatGentle 4s ease-in-out infinite; }
+@keyframes fadeSlideUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+.animate-hero-in { animation: fadeSlideUp 0.9s cubic-bezier(0.22, 1, 0.36, 1) both; }
+.cover-transition { transition: opacity 0.85s cubic-bezier(0.22, 1, 0.36, 1), transform 0.85s cubic-bezier(0.22, 1, 0.36, 1); }
+.cover-opening { opacity: 0 !important; transform: translateY(-48px) scale(0.98) !important; pointer-events: none; }
+.reveal-section { opacity: 1; transform: translateY(0); transition: opacity 0.75s cubic-bezier(0.22, 1, 0.36, 1), transform 0.75s cubic-bezier(0.22, 1, 0.36, 1); }
+.reveal-section.is-visible { opacity: 1; transform: translateY(0); }
